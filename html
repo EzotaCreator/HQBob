@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key System</title>
+</head>
+<body>
+    <h1>Ezota Free Key</h1>
+    <p id="keyDisplay"></p>
+    <script>
+        // Fetch the key from your server
+        fetch('https://your-server-endpoint.com/generate-key')
+            .then(response => response.json()) // Parse the response as JSON
+            .then(data => {
+                // Display the key in the HTML document
+                document.getElementById('keyDisplay').textContent = data.key;
+            })
+            .catch(error => console.error('Error fetching key:', error));
+    </script>
+</body>
+</html>
